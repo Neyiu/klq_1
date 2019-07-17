@@ -1,0 +1,184 @@
+        #top1_1{
+            width:100%;
+            height: 80px;
+            background: #111521;
+        }
+        #top{
+            width: 1230px;
+            height: 80px;
+            margin:0 auto;
+        }
+        #zhi_yin{
+            width: 100%;height:34px;
+            background: #26354C;
+            text-decoration:none;
+            text-align: center;
+            color:white;
+            font-size: 18px;
+            line-height: 32px;
+
+        }
+        .zhiyin_m{
+            width: 1300px;height:34px;
+            background-image:linear-gradient(to right,#26354c 34%,#425b84 50%,#26354c 60%);
+            margin:0 auto;
+
+        }
+        .card-header {
+            padding:0;
+        }
+
+        .bg1{
+            background-image:url(../csgoimg/bg.png);
+            background-repeat: no-repeat;
+        }
+        .bg2{
+            background-image:url(../csgoimg/bg2.jpg);
+            background-repeat: no-repeat;
+            height: 856px;
+        }
+        .tab-content #zh .a_btn,.tab-content #xw .a_btn,.tab-content #gg .a_btn,.col-right .a_btn{
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            height: 50px;
+            text-decoration: none;
+            line-height: 50px;
+            background-color: hsla(0,0%,100%,.2);
+        }
+        .col-right .r_bgimg1{
+            width: 390px;
+            height: 144px;
+            background-image: url(../csgoimg/r_1.jpg);
+            background-repeat: no-repeat;
+        }
+        .col-right .r_bgimg2{
+            width: 390px;
+            height: 144px;
+            background-image: url(../csgoimg/r_2.jpg);
+            background-repeat: no-repeat;
+        }
+        .col-right .r_bgimg3{
+            width: 390px;
+            height: 144px;
+            background-image: url(../csgoimg/r_3.jpg);
+            background-repeat: no-repeat;
+        }
+        .modal .modal-dialog .modal-content .denglu{
+            width: 440px;
+            height: 570px;
+            background-image: url(../csgoimg/bg_denglu.png);
+            padding-top: 90px;
+            padding-bottom: 25px;
+            position: absolute;
+            border-radius: 5px;
+            left: 26px;
+            top: 150px;
+            background-size: 100% 100%;
+            align-self: center;
+        }
+        .modal .modal-dialog .modal-content h2 {
+            margin-bottom: 32px;
+            font-size: 22px;
+            text-align: center;
+            color: #fff;
+        }
+        .modal .modal-dialog .modal-content p {
+            font-size: 18px;
+            line-height: 33px;
+            color: #acacac;
+            text-align: center;
+        }
+        .modal .modal-dialog .modal-content p a{
+            color: #37c0e2;
+            text-decoration: underline;
+        }
+        .modal .modal-dialog .modal-content .input_text{
+            width: 350px;
+            height: 34px;
+            background-color: #131313;
+            border: 1px solid #384c68;
+            margin: auto;
+            margin-bottom: 16px;
+        }
+        .modal .modal-dialog .modal-content .input_pwd{
+            width: 350px;
+            height: 34px;
+            background-color: #131313;
+            border: 1px solid #384c68;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .modal .modal-dialog .modal-content .input_text img{
+             float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+             width: 22px;
+         }
+        .modal .modal-dialog .modal-content .input_pwd img{
+            float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 22px;
+        }
+        .modal .modal-dialog .modal-content .input_text input{
+            width: 284px;
+            height: 34px;
+            background-color: transparent;
+            border: 0;
+            color: #595959;
+            font-size: 16px;
+            line-height: 34px;
+            position: absolute;
+            left: 79px;
+            font-family: "Î¢ÈíÑÅºÚ";
+        }
+        .modal .modal-dialog .modal-content .input_pwd input{
+            width: 284px;
+            height: 34px;
+            background-color: transparent;
+            border: 0;
+            color: #595959;
+            font-size: 16px;
+            line-height: 34px;
+            position: absolute;
+            left: 79px;
+            font-family: "Î¢ÈíÑÅºÚ";
+        }
+        .modal .modal-dialog .modal-content .input_text .reset{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 366px;
+            top: 252px;
+            background: url(../csgoimg/denglu_off.png);
+            background-size: 100%;
+
+        }
+        .modal .modal-dialog .modal-content .input_pwd .reset{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 366px;
+            top: 302px;
+            background: url(../csgoimg/denglu_off.png);
+            background-size: 100%;
+        }
+        .denglu .rum_id{
+            width: 350px;
+            height: 31px;
+            margin: 0 auto;
+            color: #999;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+        .denglu .rum_id .forget_pwd{
+            font-family: "Î¢ÈíÑÅºÚ","ËÎÌå",Arial, Helvetica, sans-serif;
+            float: right;
+            text-align: right;
+            text-decoration: none;
+            color: #999;
+        }

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title></title>
+    <!--引入4个文件，必须主义倒入顺序-->
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/homepage.css"/>
+    <link rel="stylesheet" href="../css/guide.css"/>
+    <link rel="stylesheet" href="../css/layout.css"/>
+    <link rel="stylesheet" href="../css/bg3.css"/>
+    <style>
+        .bg4 {
+            background: url(../csgoimg/bg4.jpg);
+            height: 1040px;
+            background-position-y:-381px;
+            background-repeat: no-repeat;
+        }
+        .bg4 .title{
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1;
+            padding: 90px 0 40px;
+            color:#fff;
+        }
+        .bg4 .psp_inner{
+            width: 1300px;
+            margin:0 auto;
+        }
+        .psp_inner .psp_left {
+            width: 635px;
+            height: 576px;
+            margin-right: 30px;
+            color: #fff;
+            float: left;
+
+        }
+        .psp-tabs{
+            overflow: hidden;
+            border-bottom: 1px solid hsla(0,0%,100%,.2);
+            list-style: none;
+            padding-left: 0px;
+        }
+        .psp-tabs li {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            height: 70px;
+            line-height: 70px;
+            float: left;
+            position: relative;
+
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+        }
+        .psp-tabs li a{
+            float: left;
+            width: 90px;
+            height: 70px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        #psp_details{
+            position: relative;
+
+        }
+        #psp_details #gonglue,#psp_details #jiaoxue,#psp_details #wuqi,#psp_details #ditu{
+            position: absolute;
+        }
+        .media_psp{
+            height: 144px;
+            margin: 36px 20px 0;
+            background-color: rgba(0,0,0,.2);
+            margin-right:25px;
+        }
+
+        .media_psp img{
+            height: 144px;
+        }
+
+        .media_psp dt{
+            width: 214px;
+            height: 144px;
+            overflow: hidden;
+            float: left;
+
+        }
+        .media_psp dd{
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+        }
+        .media_psp h4{
+            font-size: 24px;
+        }
+        .psp_left .ul_gl{
+            padding-left:40px;
+            margin: 23px 25px 18px -5px;
+
+        }
+        .psp_left .ul_gl a{
+            color: #fff;
+            line-height: 47px;
+        }
+        #psp_details .a_btn,.psp_right .a_btn{
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            height: 50px;
+            text-decoration: none;
+            line-height: 50px;
+            background-color: hsla(0,0%,100%,.2);
+
+        }
+        #psp_details .tab-pane,#other_psp .tab_pane{
+            display: none;
+        }
+
+        #psp_details .active,#other_psp .active{
+            display: block;
+        }
+        .psp-tabs li:hover{
+            border-bottom: 4px solid #fff;
+            margin-bottom: -4px;
+        }
+        .psp_right{
+            width: 635px;
+            float: left;
+        }
+        .psp_right .other_thing{
+            padding: 0 25px;
+            margin: 26px 0 16px 0;
+        }
+        .other_thing table tr div{
+            width: 278px;
+            height: 147px;
+            overflow: hidden;
+        }
+        .other_thing table tr tr{
+            width: 278px;
+            height: 188px;
+
+        }
+        .psp_right .other_thing img{
+            width: 100%;
+            height: 100%;
+            transition: .3s ease-in-out;;
+        }
+        .other_thing .bizhi_img{
+            width: 278px;
+            height: 188px;
+        }
+        .other_thing .tab_img,.other_thing .bizhi_img{
+            position: relative;
+        }
+        .psp_right .other_thing a{
+            text-decoration: none;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+        .psp_right .other_thing a:hover img {
+            transform: scale(1.1, 1.1);
+        }
+        .psp_right .other_thing h3{
+            color: #fff;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            background-color: #5d6e83;
+        }
+        .other_thing .right_tab td{
+            padding: 10px;
+        }
+        .other_thing .right_tab h3{
+            margin-bottom: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 278px;
+        }
+        .bg4 .sprite{
+            width: 1300px;
+            height: 144px;
+            padding-top: 94px;
+            padding-left: 64px;
+            background-color: aqua;
+            margin: auto;
+            margin-top: 77px;
+        }
+    </style>
+</head>
+<body>
+<div class="body_index">
+<div class="bg1" style="height: 925px">
+    <div class="top1" >
+        <div id="top1_1">
+            <div id="top">
+                <div class="ul_f_l">
+                    <ul class="nav justify-content-around">
+
+                        <li class="nav-item">
+                            <div class="top_logo">
+                                <a  href="https://www.csgo.com.cn/" target="_blank"><img class="img_logo_top"  src="../csgoimg/h5课程表.png" alt="反恐精英"/></a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.csgo.com.cn/" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">首页</h4>
+                            <p class="p_top">HOME</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.csgo.com.cn/news/index.html" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">新闻资讯</h4>
+                                <p class="p_top">NEWS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.csgo.com.cn/activity/index.html" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">活动中心</h4>
+                                <p class="p_top">EVENT</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.csgo.com.cn/strategy/index.html" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">玩家攻略</h4>
+                                <p class="p_top">TIPS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.csgo.com.cn/hd/1610/info/index.html" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">游戏资料</h4>
+                                <p class="p_top">GUIDES</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://shop.csgo.com.cn/" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">军需商店</h4>
+                                <p class="p_top">SHOP</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://members.csgo.com.cn/" target="_blank">
+                                <h4 class="text-white mt-3 mb-0 h4_top">个人中心</h4>
+                                <p class="p_top">MEMBERS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="text-white top_denglu">
+                                <p>您好，请<a class="text-denglu" data-toggle="modal" data-target="#mymodal" style="text-decoration: none" href=""> 登录</a></p>
+                                <div id="mymodal" class="modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <table></table>
+                                            <div class="denglu">
+                                                <h2>完美通行证账号登录</h2>
+                                                <p><a href="https://www.csgo.com.cn/faq/fordota2.html" target="_blank">国服Dota2玩家</a>请使用已绑定的完美通行证直接登录</p>
+                                                <p><a href="https://members.csgo.com.cn/findPwAccount" target="_blank">通过CSGO/Dota2账号找回完美通行证</a></p>
+                                                <div style="margin-bottom:-16px ">
+                                                    <div class="input_text">
+                                                        <div class="png_img"><img src="../csgoimg/denglu_id.png" alt=""/></div>
+                                                        <form action="">
+                                                            <input class="" placeholder="输入您的手机号/邮箱地址/个性账号" type="text" />
+                                                            <input class="reset" type="reset" value=""/>
+                                                        </form>
+                                                    </div>
+                                                    <div class="input_pwd">
+                                                        <div class="png_img"><img src="../csgoimg/denglu_pwd.png" alt=""/></div>
+                                                        <form action="">
+                                                            <input class="" placeholder="输入您的密码" type="password"/>
+                                                            <input class="reset" type="reset" value=" "/>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="rum_id">
+                                                    <div class="rum_id_input">
+                                                        <input type="checkbox"/>
+                                                        <span>&nbsp;&nbsp;&nbsp;记住账号</span>
+                                                        <a class="float-right forget_pwd"  href="https://passport.wanmei.com/password/" target="_blank">忘记密码</a>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="denglu_btn">
+                                                    <a href="">登录</a>
+                                                </div>
+                                                <div class="creat_btn">
+                                                    <a href="https://passport.wanmei.com/reg/?s=csgo" target="_blank">注册完美通行证</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div id="parent" class="card border-0">
+            <div class="card-header">
+                <a id="zhi_yin" class="card-link " data-toggle="collapse" href="#c1" style="display: block" target="_blank">
+                    <div class="zhiyin_m dropdown-toggle">
+                        快速指引<span></span>
+                    </div>
+
+                </a>
+            </div>
+            <div id="c1" class="collapse" data-parent="#parent">
+                <div class="guide">
+                    <ul class="guide_ul">
+                        <li class="brown">
+                            <p class="step">第一步</p>
+                            <a class="step_1" href="https://www.csgo.com.cn/download/index.html" target="_blank">下载国服客户端</a>
+                        </li>
+                        <li class="blue">
+                            <p class="step">第二步</p>
+                            <p class="step_2">
+                                客户端内注册
+                                <a href="javascript:">
+                                    CS:GO账号
+                                    <img style="width: 18px" src="../csgoimg/help.png" alt=""/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="blue">
+                            <p class="step">第三步</p>
+                            <p class="step_2">
+                                注册并绑定
+                                <a href="javascript:">
+                                    完美通行证
+                                    <img style="width: 18px" src="../csgoimg/help.png" alt=""/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="blue">
+                            <p class="step">第四步</p>
+                            <p class="step_3" style="margin-top: -15px">方式1：完成<a href="https://passport.wanmei.com/sso/login?service=csgo&location=2f69647665726966792f3f747970653d30" target="_blank">荣耀认证</a>免费获取CS:GO</p>
+                            <p class="step_3">方式2：89元付费购买CS:GO</p>
+                            <p class="step_3">方式3：2018年12月7日前购买国际服游戏的账号可以直接回归</p>
+                        </li>
+                        <li class="brown" target="_blank">
+                            <p class="step">第五步</p>
+                            <p class="step_5">立即享受畅爽国服</p>
+                        </li>
+                    </ul>
+                    <div class="sub">
+                        <div class="sub_1">
+                            <span>官网内进行</span>
+                        </div>
+                        <div class="sub_2">
+                            <span>国服客户端进行</span>
+                        </div>
+                        <div class="sub_3">
+                            <span>可用国服客户端登录或在
+                                <a href="javascript:" target="_blank">Steam加参数
+                                    <img style="width: 16px" src="../csgoimg/help.png" alt=""/>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+    <div class="lb_margin">
+        <!--轮播-->
+        <div id="demo" class="carousel slide float-left lb_left" data-ride="carousel">
+            <!-- 1.轮播图片carousel-inner-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://csgo.wanmei.com/friends" target="_blank" ><img class="w-lb" src="../csgoimg/lb1.jpg"/></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://shop.csgo.com.cn/" target="_blank"><img class="w-lb" src="../csgoimg/lb2.jpg"/></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://esports.wanmei.com/citychallenge" target="_blank"><img class="w-lb" src="../csgoimg/lb3.jpg"/></a>
+                </div>
+            </div>
+            <!-- 2.左右箭头-->
+            <a data-slide="prev" href="#demo" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a data-slide="next" href="#demo" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+            <!-- 3.轮播指示器-->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+        </div>
+        <div class="float-left">
+            <a href="https://www.csgo.com.cn/download/index.html" target="_blank" class="pb-0"><video style="width:420px" src="../csgoimg/down-csgo.MP4" loop autoplay muted></video></a>
+            <div class="logo_center"style="margin-top:-6px;" >
+                <div><a class="float-left logo_a_9" href="https://www.csgo.com.cn/obguide/index.html" target="_blank"><img src="../csgoimg/01.png" alt=""/><p>免费畅玩</p></a></div>
+                <div><a class="float-left logo_a_9" href="http://csgo.wanmei.com/communityserver" target="_blank"><img src="../csgoimg/02.png" alt=""/><p>社区服黄页</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://members.csgo.com.cn/pay/" target="_blank"><img src="../csgoimg/03.png" alt=""/><p>游戏充值</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://www.csgo.com.cn/news/gamenews/20170913/206234.shtml" target="_blank"><img src="../csgoimg/04.png" alt=""/><p>国际服回归</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://shop.csgo.com.cn/" target="_blank"><img src="../csgoimg/05.png" alt=""/><p>周边商城</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://www.csgo.com.cn/hd/1704/newerguide/index.html" target="_blank"><img src="../csgoimg/06.png" alt=""/><p>常见问题</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://csgo.wanmei.com/redeem" target="_blank"><img src="../csgoimg/07.png" alt=""/><p>礼品码兑换</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://csgo.wanmei.com/vacban/list" target="_blank"><img src="../csgoimg/08.png" alt=""/><p>封禁名单</p></a></div>
+                <div><a class="float-left logo_a_9" href="https://pvp.wanmei.com/main.html#m-csgo" target="_blank"><img src="../csgoimg/09.png" alt=""/><p>完美对战平台</p></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="clear"></div>
+</div>
+<div class="bg2">
+    <div class="title_content">
+        <h1 class="news-title">新闻活动</h1>
+    </div>
+    <div class="news-panel">
+        <div class="col-left">
+            <ul class="nav new-tabs ul_news_title">
+                <li>
+                    <a data-toggle="tab" class="a_news_title" href="#zh">综合</a>
+                </li>
+                <li class="">
+                    <a data-toggle="tab" class="a_news_title" href="#xw">新闻</a>
+                </li>
+                <li class="">
+                    <a data-toggle="tab" class="a_news_title" href="#gg">公告</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="zh" class="tab-pane active">
+                    <ul class="ul_news_content">
+                        <li><a href="">只知道virre？这些大片叫国人创作！CSGO视频大赛获奖公布</a><span class="float-right active" style="text-align: right;line-height: 47px;">06/28</span></li>
+                        <li><a href="">各路英雄集结完毕 城市挑战赛CS:GO全国赛本周开战</a><span class="float-right" style="text-align: right;line-height: 47px;">06/25</span></li>
+                        <li><a href="">CS 20周年狂欢：6.19白给节登场！龙狙也白给</a><span class="float-right" style="text-align: right;line-height: 47px;">06/19</span></li>
+                        <li><a href="">城市挑战赛海选阶段最后机会！本周杭州、哈尔滨即将开战</a><span class="float-right" style="text-align: right;line-height: 47px;">06/18</span></li>
+                        <li><a href="">CAC 2019蓄势待发，ENCE、MIBR、TYLOO将赴上海战场</a><span class="float-right" style="text-align: right;line-height: 47px;">06/14</span></li>
+                        <li><a href="">久等了，兄弟！CS 20周年官方纪念周边预售开启！</a><span class="float-right" style="text-align: right;line-height: 47px;">06/12</span></li>
+                        <li><a href="">双料冠军达成！城市赛本周末广州、成都吹响集结号</a><span class="float-right" style="text-align: right;line-height: 47px;">06/11</span></li>
+                        <li><a href="">2019完美世界全国高校联赛（春季赛）全国总决赛合肥落幕 秋季赛新学期见</a><span class="float-right" style="text-align: right;line-height: 47px;">06/11</span></li>
+                        <li><a href="">“CS 20周年”网鱼网咖线下活动正式开启！</a><span class="float-right" style="text-align: right;line-height: 47px;">06/03</span></li>
+                    </ul>
+                    <a class="a_btn" href="">查看更多综合</a>
+                </div>
+                <div id="xw" class="tab-pane">
+                    <ul class="ul_news_content">
+                        <li><a href="">只知道virre？这些大片叫国人创作！CSGO视频大赛获奖公布</a><span class="float-right active" style="text-align: right;line-height: 47px;">06/28</span></li>
+                        <li><a href="">各路英雄集结完毕 城市挑战赛CS:GO全国赛本周开战</a><span class="float-right" style="text-align: right;line-height: 47px;">06/25</span></li>
+                        <li><a href="">CS 20周年狂欢：6.19白给节登场！龙狙也白给</a><span class="float-right" style="text-align: right;line-height: 47px;">06/19</span></li>
+                        <li><a href="">城市挑战赛海选阶段最后机会！本周杭州、哈尔滨即将开战</a><span class="float-right" style="text-align: right;line-height: 47px;">06/18</span></li>
+                        <li><a href="">CAC 2019蓄势待发，ENCE、MIBR、TYLOO将赴上海战场</a><span class="float-right" style="text-align: right;line-height: 47px;">06/14</span></li>
+                        <li><a href="">久等了，兄弟！CS 20周年官方纪念周边预售开启！</a><span class="float-right" style="text-align: right;line-height: 47px;">06/12</span></li>
+                        <li><a href="">双料冠军达成！城市赛本周末广州、成都吹响集结号</a><span class="float-right" style="text-align: right;line-height: 47px;">06/11</span></li>
+                        <li><a href="">2019完美世界全国高校联赛（春季赛）全国总决赛合肥落幕 秋季赛新学期见</a><span class="float-right" style="text-align: right;line-height: 47px;">06/11</span></li>
+                        <li><a href="">“CS 20周年”网鱼网咖线下活动正式开启！</a><span class="float-right" style="text-align: right;line-height: 47px;">06/03</span></li>
+                    </ul>
+                    <a class="a_btn" href="">查看更多新闻</a>
+                </div>
+                <div id="gg" class="tab-pane">
+                    <ul class="ul_news_content">
+                        <li><a href="">【更新】新地图加入头号特训匹配 5月22日更新公告
+                        </a><span class="float-right active" style="text-align: right;line-height: 47px;">05/22</span></li>
+                        <li><a href="">【更新】防爆盾出击！5月8日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">05/08</span></li>
+                        <li><a href="">【更新】2张新地图加入！4月26日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">04/26</span></li>
+                        <li><a href="">【更新】BUG修复 4月23日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">04/23</span></li>
+                        <li><a href="">【更新】地图细节调整 4月3日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">04/03</span></li>
+                        <li><a href="">【更新】殒命大厦加入服役生涯组！3月29日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">03/29</span></li>
+                        <li><a href="">卡托维兹Major国服抽奖活动中奖名单</a><span class="float-right" style="text-align: right;line-height: 47px;">03/21</span></li>
+                        <li><a href="">【更新】殒命大厦加入竞技地图池 3月20日更新公告</a><span class="float-right" style="text-align: right;line-height: 47px;">03/20</span></li>
+                        <li><a href="">Major限时优惠活动抽奖页面上线公告</a><span class="float-right" style="text-align: right;line-height: 47px;">03/13</span></li>
+                    </ul>
+                    <a class="a_btn" href="">查看更多公告</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-right">
+            <a href=""><div class="r_bgimg1"><span>进行中</span></div></a>
+            <a href=""><div class="r_bgimg2"><span>进行中</span></div></a>
+            <a href=""><div class="r_bgimg3"><span>进行中</span></div></a>
+            <div><a class="a_btn" href="">查看更多活动</a></div>
+        </div>
+    </div>
+</div>
+<div class="bg3">
+    <div class="title_content">
+        <h1>电竞中心</h1>
+    </div>
+    <div class="ele_tab1">
+        <div class="tab1_left">
+            <a href="https://csgo.wanmei.com/cac2018/" target="_blank"><img style="height: 270px" src="../csgoimg/invite_Asia.jpg" alt=""/></a>
+            <a class="go_left" href="javascript:"><</a>
+            <a class="go_right" href="javascript:">></a>
+
+            <div class="left_bottom">
+                <table></table>
+                <h3>CS:GO Asia Championships 亚洲邀请赛 2018</h3>
+                <p class="p1">
+                    CAC 2018是亚洲最具观赏性、对抗性的CS:GO赛事之一。
+                    于6月14-18日在上海成功举办。
+                    最终来自乌克兰的Na`Vi战队夺得冠军，豪享15万美元奖金。
+                </p>
+                <p class="p2">总奖池 <b>$30.0000</b> 决赛队伍 <b>8支</b></p>
+            </div>
+        </div>
+        <div class="tab1_right">
+            <div class="title_header">
+                <div class="s_s" style="width:90px ">赛事</div>
+                <div class="s_j" style="width:155px ">时间</div>
+                <div class="d_z" style="width: 220px; ">对阵</div>
+                <div class="b_f" style="width: 138px; ">比分</div>
+            </div>
+            <div class="details_duizhen">
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-saishi">
+                        <img src="../csgoimg/team.jpg" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-shijian">05/05 13:00</div>
+                    <div class="col-duizheng">
+                        <img src="../csgoimg/team1.png" class="mCS_img_loaded">
+                        <span>vs</span>
+                        <img src="../csgoimg/team2.png" class="mCS_img_loaded">
+                    </div>
+                    <div class="col-bifen">
+                        <span class="s1">3</span>
+                        <span class="s2">:</span>
+                        <span class="s3">2</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="bg4">
+    <div class="title_content">
+        <header class="title">攻略中心</header>
+    </div>
+    <div class="psp_inner">
+        <div class="psp_left">
+            <ul class="nav psp-tabs j_tabs_navs">
+                <li class="active"><a href="#gonglue" data-toggle="tab" >攻略</a></li>
+                <li><a href="#jiaoxue" data-toggle="tab" >教学</a></li>
+                <li><a href="#wuqi" data-toggle="tab">武器</a></li>
+                <li><a href="#ditu" data-toggle="tab">地图</a></li>
+            </ul>
+            <div id="psp_details">
+                <div id="gonglue" class="tab-pane active">
+                    <dl class="media_psp">
+                        <dt>
+                            <a href="https://www.csgo.com.cn/article/details/20190110/213051.html">
+                                <img src="../csgoimg/psp_1.jpg" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <h4 class="text-truncate ">【职业视角】EPL S8中Astralis在小镇的进攻与残局</h4>
+                            <p>今天让我们以EPL S8赛事上Astralis与Liquid的较量为例，看看Astralis在地图方面的控制与细节的处理方式。</p>
+                        </dd>
+                    </dl>
+                    <ul class="ul_gl">
+                        <li><a href="">【VAC穿点】炙热沙城Ⅱ、死亡游乐园</a><span class="float-right active" style="text-align: right;line-height: 47px;">10/24</span></li>
+                        <li><a href="">如何科学地Rush B？（二）</a><span class="float-right" style="text-align: right;line-height: 47px;">10/22</span></li>
+                        <li><a href="">如何做一个合格的自由人</a><span class="float-right" style="text-align: right;line-height: 47px;">10/19</span></li>
+                        <li><a href="">如何科学地Rush B？</a><span class="float-right" style="text-align: right;line-height: 47px;">10/17</span></li>
+                        <li><a href="">CSGO新经济系统带来的改变</a><span class="float-right" style="text-align: right;line-height: 47px;">10/15</span></li>
+
+                    </ul>
+                    <a class="a_btn" href="">查看更多攻略</a>
+                </div>
+                <div id="jiaoxue" class="tab-pane">
+                    <dl class="media_psp">
+                        <dt>
+                            <a href="https://www.csgo.com.cn/article/details/20190110/213051.html">
+                                <img src="../csgoimg/psp_1.jpg" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <h4 class="text-truncate ">【职业视角】EPL S8中Astralis在小镇的进攻与残局</h4>
+                            <p>今天让我们以EPL S8赛事上Astralis与Liquid的较量为例，看看Astralis在地图方面的控制与细节的处理方式。</p>
+                        </dd>
+                    </dl>
+                    <ul class="ul_gl">
+                        <li><a href="">如何科学地Rush B？（二）</a><span class="float-right" style="text-align: right;line-height: 47px;">10/22</span></li>
+                        <li><a href="">如何做一个合格的自由人</a><span class="float-right" style="text-align: right;line-height: 47px;">10/19</span></li>
+                        <li><a href="">如何科学地Rush B？</a><span class="float-right" style="text-align: right;line-height: 47px;">10/17</span></li>
+                        <li><a href="">CSGO新经济系统带来的改变</a><span class="float-right" style="text-align: right;line-height: 47px;">10/15</span></li>
+                        <li><a href="">小闪光，大作用！想玩好CSGO，这些闪光弹诀窍你得知道</a><span class="float-right" style="text-align: right;line-height: 47px;">01/25</span></li>
+
+                    </ul>
+                    <a class="a_btn" href="">查看更多教学</a>
+                </div>
+                <div id="wuqi" class="tab-pane">
+                    <dl class="media_psp">
+                        <dt>
+                            <a href="https://www.csgo.com.cn/tips/weapon/20171130/208150.shtml">
+                                <img src="../csgoimg/psp_2.jpg" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <h4 class="text-truncate ">那些低调的武器，现实中足以让你尖叫</h4>
+                            <p>历代CS作品中，优秀的武器系统一直是游戏的亮点之一。</p>
+                        </dd>
+                    </dl>
+                    <ul class="ul_gl">
+                        <li><a href="">如何用PS绘制一把专属自己的枪械皮肤</a><span class="float-right active" style="text-align: right;line-height: 47px;">10/24</span></li>
+                        <li><a href="">【CSGO水浒传】第三期：黑旋风李逵——P90</a><span class="float-right" style="text-align: right;line-height: 47px;">10/20</span></li>
+                        <li><a href="">【CSGO水浒传】第二期：豹子头林冲——AK-47</a><span class="float-right" style="text-align: right;line-height: 47px;">10/19</span></li>
+                        <li><a href="">CSGO水浒英雄榜之双鞭呼延灼——M4A4</a><span class="float-right" style="text-align: right;line-height: 47px;">10/18</span></li>
+                        <li><a href="">暴匪专用 怼脸必备——Sawed-Off</a><span class="float-right" style="text-align: right;line-height: 47px;">09/05</span></li>
+
+                    </ul>
+                    <a class="a_btn" href="">查看更多武器</a>
+                </div>
+                <div id="ditu" class="tab-pane">
+                    <dl class="media_psp">
+                        <dt>
+                            <a href="https://www.csgo.com.cn/tips/weapon/20171130/208150.shtml">
+                                <img src="../csgoimg/psp_3.jpg" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <h4 class="text-truncate ">【VAC穿点】炙热沙城Ⅱ、死亡游乐园</h4>
+                            <p>掌握穿点技巧，往往会在游戏中得到意想不到的收获。</p>
+                        </dd>
+                    </dl>
+                    <ul class="ul_gl">
+                        <li><a href="">盘点CSGO中以职业哥命名的点位</a><span class="float-right active" style="text-align: right;line-height: 47px;">11/24</span></li>
+                        <li><a href="">当年沙二墨镜男，如今成了油腻中年大叔！</a><span class="float-right" style="text-align: right;line-height: 47px;">11/17</span></li>
+                        <li><a href="">新炙热沙城2的枪位变化及投掷物简介（下）</a><span class="float-right" style="text-align: right;line-height: 47px;">10/27</span></li>
+                        <li><a href="">新炙热沙城2的枪位变化及投掷物简介（上）</a><span class="float-right" style="text-align: right;line-height: 47px;">10/27</span></li>
+                        <li><a href="">制霸沙2不是梦（上）这些枪位助你掌握先机</a><span class="float-right" style="text-align: right;line-height: 47px;">09/21</span></li>
+
+                    </ul>
+                    <a class="a_btn" href="">查看更多武器</a>
+                </div>
+            </div>
+        </div>
+        <div class="psp_right">
+            <ul class="nav psp-tabs j_tabs_navs">
+                <li class="active"><a href="#shipin" data-toggle="tab" >视频</a></li>
+                <li><a href="#saishi" data-toggle="tab" >赛事</a></li>
+                <li><a href="#bizhi" data-toggle="tab">壁纸</a></li>
+            </ul>
+            <div id="other_psp">
+                <div id="shipin" class="tab_pane active">
+                    <div class="other_thing">
+                        <table class="right_tab">
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/sp1.png" alt=""/>
+                                        </div>
+                                        <h3>CT捡到AK也没用</h3>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/sp2.png" alt=""/>
+                                        </div>
+                                        <h3>一波五杀 秀的飞起</h3>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/sp3.png" alt=""/>
+                                        </div>
+                                        <h3>头号特训 实机展示</h3>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/sp4.jpg" alt=""/>
+                                        </div>
+                                        <h3>CS:GO防弹衣知识大全</h3>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a class="a_btn" href="">查看更多视频</a>
+                </div>
+                <div id="saishi" class="tab_pane">
+                    <div class="other_thing">
+                        <table class="right_tab">
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/ss1.jpg" alt=""/>
+                                        </div>
+                                        <h3>人人都是KennyS</h3>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/ss2.jpg" alt=""/>
+                                        </div>
+                                        <h3>城市精英赛 表演赛 Flash Gaming VS MVP.K 第二场</h3>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/ss2.jpg" alt=""/>
+                                        </div>
+                                        <h3>城市精英赛 冠军挑战赛 Flash Gaming VS EPHORSE</h3>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="tab_img">
+                                            <img src="../csgoimg/ss2.jpg" alt=""/>
+                                        </div>
+                                        <h3>城市精英赛 表演赛 Flash Gaming VS MVP.K 第一场</h3>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a class="a_btn" href="">查看更多赛事</a>
+                </div>
+                <div id="bizhi" class="tab_pane">
+                    <div class="other_thing">
+                        <table class="right_tab">
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="bizhi_img">
+                                            <img src="../csgoimg/bz1.jpg" alt=""/>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="bizhi_img">
+                                            <img src="../csgoimg/bz2.jpg" alt=""/>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <div class="bizhi_img">
+                                            <img src="../csgoimg/bz3.jpg" alt=""/>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <div class="bizhi_img">
+                                            <img src="../csgoimg/bz4.jpg" alt=""/>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a class="a_btn" href="">查看更多壁纸</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="sprite">
+
+    </div>
+</div>
+ <footer>
+     <iframe src="footer.html" class="my_footer" frameborder="0" scrolling="no"></iframe>
+ </footer>
+</div>
+<script>
+
+</script>
+</body>
+</html>

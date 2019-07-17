@@ -1,0 +1,115 @@
+  .guide_ul{
+            width: 1903px;
+            padding-top: 22px;
+            text-align: center;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .guide li{
+            display: inline-block;
+            margin: 0 auto;
+            width: 236px;
+            height: 136px;
+            background-repeat: no-repeat;
+            margin-right: 12px;
+            text-align: center;
+            list-style-type: none;
+            overflow: hidden;
+        }
+        .guide .step{
+            font-size: 40px;
+            font-weight:700;
+            color:#ffffff70;
+        }
+        .guide .brown{
+            background-image:linear-gradient(to right,#574833 15%,#73634b 50%,#574833 85%);
+        }
+        .guide .blue{
+            background-image:linear-gradient(to right,#26354c 15%,#3f5373 50%,#26354c 85%);
+        }
+        .guide .brown .step_1{
+            background:#846e50;
+            display: block;
+            margin: 0 auto;
+            width: 182px;
+            height: 36px;
+            border-radius: 18px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 36px;
+            text-decoration: none;
+        }
+        .guide .blue .step_2,.guide .brown .step_5{
+            height: 36px;
+            line-height: 36px;
+            color: #fff;
+        }
+        .guide .blue .step_2 a,.guide .blue .step_3 a,.guide .sub_3 span a{
+            color:#ff8054 ;
+            text-decoration: none;
+        }
+        .guide .blue .step_3{
+            text-align: left;
+            font-size: 12px;
+            color: #fff;
+            line-height:17px;
+            margin:0 18px;
+        }
+        .guide .sub{
+            width:1903px;
+            height: 60px;
+            position: relative;
+        }
+        .guide .sub_1{
+            float: left;
+            position: absolute;
+            left: 328px;
+            width:222px;
+            height: 50px;
+            background-image: url(../csgoimg/sub1.png);
+            background-repeat: no-repeat;
+        }
+        .guide .sub_1 span{
+            position: absolute;
+            left: 69px;
+            top:10px;
+            color: #826c4c;
+            font-size: 16px;
+        }
+        .guide .sub_2{
+            float: left;
+            position: absolute;
+            left:665px;
+            top: -3px;
+            width:575px;
+            height: 50px;
+            background-image: url(../csgoimg/sub2.png);
+            background-repeat: no-repeat;
+        }
+        .guide .sub_2 span{
+            position: absolute;
+            left: 219px;
+            top:10px;
+            color: #27354e;
+            font-size: 18px;
+        }
+        .guide .sub_3{
+            float: left;
+            position: absolute;
+            left:1329px;
+            top: -2px;
+            width:575px;
+            height:50px;
+            background-image: url(../csgoimg/sub3.png);
+            background-repeat: no-repeat;
+        }
+        .guide .sub_3 span{
+            width: 177px;
+            text-align: center;
+            padding: 0;
+            position: absolute;
+            left: 32px;
+            top:12px;
+            color: #826c4c;
+            font-size: 16px;
+        }

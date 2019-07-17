@@ -1,0 +1,157 @@
+.bg3{
+            height: 797px;
+            background-image: url(../csgoimg/bg3.jpg);
+            background-repeat: no-repeat;
+        }
+        .bg3 h1{
+            color: #fff;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1;
+            padding: 90px 0 40px;
+        }
+        .bg3 .ele_tab1{
+            width: 1300px;
+            height: 478px;
+            background: rgba(142,174,221,.36);
+            padding: 30px;
+            margin:auto;
+            color: white;
+        }
+        .bg3 .ele_tab1 .tab1_left{
+            width: 605px;
+            height: 412px;
+            display: inline;
+            margin: auto;
+            position: relative;
+        }
+        .tab1_left .go_left,.tab1_left .go_right{
+            float: left;
+            width: 30px;
+            height: 60px;
+            background:#666a71 ;
+            position:absolute;
+            top: -17px;
+            z-index: 2;
+            font-size: 26px;
+            color: #fff;
+            font-weight: 1000;
+            font-family: "ËÎÌו";
+            text-decoration: none;
+            line-height: 60px;
+            text-align: center;
+        }
+        .tab1_left .go_left{
+            left: 0;
+        }
+        .tab1_left .go_right{
+            right: 0;
+        }
+
+        .tab1_left .left_bottom{
+            width: 605px;
+            height: 144px;
+            padding:0 25px;
+            background: #1d3a53;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -271px;
+        }
+        .tab1_left .left_bottom h3{
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 20px;
+
+        }
+        .tab1_left .left_bottom .p1{
+            margin-top: 8px;
+        }
+        .tab1_left .left_bottom p{
+            line-height: 1;
+        }
+        .tab1_left .left_bottom .p2 {
+            margin-top: 24px;
+        }
+        .tab1_left .left_bottom .p2 b {
+            margin: 0 60px 0 22px;
+        }
+        .bg3 .ele_tab1 .tab1_right{
+            width: 634px;
+            height: 415px;
+            float: right;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .tab1_right .title_header{
+            font-size: 24px;
+            font-weight: 700;
+            height: 55px;
+            border-bottom: 1px solid hsla(0,0%,100%,.2);
+            text-align: center;
+        }
+        .tab1_right .title_header div{
+            float: left;
+        }
+        .tab1_right .row {
+            height: 72px;
+            line-height: 72px;
+            overflow: hidden;
+            text-align: center;
+            padding-left: 15px;
+        }
+        .tab1_right .row .col-saishi {
+            width: 90px;
+        }
+        .col-saishi img {
+            max-width: 60px;
+            margin-top: 14px;
+        }
+        .col-shijian {
+            width: 155px;
+        }
+        .col-duizheng {
+            width: 220px;
+        }
+        .col-duizheng {
+            width: 220px;
+        }
+        .col-duizheng img {
+            vertical-align: middle;
+            border-style: none;
+        }
+        .col-duizheng span {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 20px;
+        }
+        .col-bifen {
+            width: 138px;
+            box-sizing: border-box;
+        }
+        .col-bifen .s1,.col-bifen .s3 {
+            border-radius: 2px;
+            font-size: 24px;
+            font-weight: 700;
+            width: 38px;
+            height: 55px;
+            line-height: 55px;
+            background-color: hsla(0,0%,100%,.2);
+        }
+        .col-bifen .s2 {
+            color: hsla(0,0%,100%,.4);
+            font-size: 20px;
+            margin: 0 5px;
+        }
+        .col-bifen .s1, .col-bifen .s2,.col-bifen .s3 {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+        .details_duizhen{
+            height:359px ;
+            overflow: scroll;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }

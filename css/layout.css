@@ -1,0 +1,4 @@
+.my_header,.my_footer,.my_body{width:100%}
+.my_footer{
+    margin-bottom: -6px;
+}
